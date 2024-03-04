@@ -13,7 +13,7 @@ root.render(
 
 export {}
 
-console.log("prova");
+console.log("Prova");
 
 //Tipi primitivi
 const i:number = 0;
