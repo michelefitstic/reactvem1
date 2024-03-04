@@ -13,7 +13,7 @@ root.render(
 
 export {}
 
-console.log("MEGACUNT");
+console.log("prova");
 
 //Tipi primitivi
 const i:number = 0;
