@@ -19,3 +19,43 @@ body {
   height: 100vh;
   font-size: 4rem;
 }
+
+.plusbutton {
+  background-color: #11d452;
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  margin-left: 5rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.plusbutton:hover {
+  background-color: #10c84d;
+}
+
+.plusbutton:active {
+  background-color: #11bd4a;
+}
+
+.minusbutton {
+  background-color: #d41411;
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  margin-left: 5rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.minusbutton:hover {
+  background-color: #c51310;
+}
+
+.minusbutton:active {
+  background-color: #ba120f;
+}
