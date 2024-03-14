@@ -1,9 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Display from "./Display";
 
-export default function Counter() {
-  const [contatore, setContatore] = useState(0);
-  console.log("App()", contatore);
+export default function Counter(props : {
+  readonly initialValue? : number;
+}) {
+  const {initialValue = 0} = props;
+  
+  const [contatore, setContatore] = useState(initialValue);
+
+  //Vuole due argomenti: l'effetto (una funzione che vuoi eseguire quando qualcosa cambia) e delle deps (se uno dei valori in questa lista cambia, la funzione passata si attiva)
+  //In questo caso quando cambia initialValue la funzione viene eseguita --> se initialValue vale 20 e tu gli assegni di nuovo il valore 20, la funzione non viene richiamata
+  //Se in useEffect metti il return di una funzione, viene eseguita prima questa e poi lo useEffect in sè
+  useEffect(() => {
+    console.log("useEffect in azione - evento di mount di Counter", initialValue);
+    setContatore(initialValue);
+    return () => {
+      console.log("return dello useEffect - evento di unmount", initialValue);
+    }
+  }, [initialValue]);
 
   return <>
     <Display n={contatore} myColor = {"black"}/>
